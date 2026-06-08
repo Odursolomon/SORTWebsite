@@ -89,13 +89,91 @@
         </div>
 
         <div class="contact-panel contact-panel--accent">
-          <p class="section-kicker">Project Support</p>
-          <h2>What to include in your message</h2>
-          <div class="feature-list">
-            <p>Briefly describe your organization, the decision or problem you need to address, and the expected timeline.</p>
-            <p>Share whether you need research, data analytics, GIS, monitoring &amp; evaluation, survey systems, digital innovation, or a combination of services.</p>
-            <p>SORT will respond with a practical next step for scoping the assignment.</p>
-          </div>
+          <p class="section-kicker">Send us a message</p>
+          <h2>Contact Form</h2>
+          <form id="contact-form" action="https://formspree.io/f/mzdqgpvp" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="SORT Website Inquiry">
+            <input type="hidden" name="_next" value="https://sort.co.ug/thank-you.html">
+            <input type="text" name="_honeypot" style="display:none;">
+
+            <fieldset style="border: none; padding: 0; margin: 0;">
+              <div style="margin-bottom: 16px;">
+                <label for="full_name" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Full Name <span style="color: #D7261E;">*</span></label>
+                <input type="text" id="full_name" name="full_name" placeholder="Your full name" required style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="email" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Email Address <span style="color: #D7261E;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="organization" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Organization / Institution <span style="color: #D7261E;">*</span></label>
+                <input type="text" id="organization" name="organization" placeholder="Your organization" required style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="phone" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+256 ..." style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="inquiry_type" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Inquiry Type <span style="color: #D7261E;">*</span></label>
+                <select id="inquiry_type" name="inquiry_type" required style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem; background-color: white;">
+                  <option value="">Select an inquiry type...</option>
+                  <option value="General inquiry">General inquiry</option>
+                  <option value="FAESLIMS demo request">FAESLIMS demo request ⭐</option>
+                  <option value="Research consultancy">Research consultancy</option>
+                  <option value="Data analytics / M&amp;E">Data analytics / M&amp;E</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="lab_type" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Laboratory Type (if applicable)</label>
+                <input type="text" id="lab_type" name="lab_type" placeholder="e.g., Research, Diagnostic, Environmental" style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="current_system" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Current System Used (if applicable)</label>
+                <input type="text" id="current_system" name="current_system" placeholder="e.g., Manual records, Excel, other LIMS" style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem;">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label for="timeline" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Expected Timeline</label>
+                <select id="timeline" name="timeline" style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem; background-color: white;">
+                  <option value="">Select timeline...</option>
+                  <option value="Immediate">Immediate</option>
+                  <option value="1-3 months">1-3 months</option>
+                  <option value="3-6 months">3-6 months</option>
+                  <option value="Exploratory">Exploratory (no immediate plan)</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label for="message" style="display: block; font-weight: 600; color: #0F2F4F; margin-bottom: 6px; font-size: 0.95rem;">Message <span style="color: #D7261E;">*</span></label>
+                <textarea id="message" name="message" placeholder="Tell us about your needs and how we can help..." required style="width: 100%; padding: 10px; border: 1px solid #DDE6EE; border-radius: 6px; font-family: inherit; font-size: 1rem; min-height: 120px; resize: vertical;"></textarea>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #66788A;">
+                  <input type="checkbox" name="consent" required style="margin-top: 4px; cursor: pointer;">
+                  <span>I agree to be contacted by SORT via email or phone regarding my inquiry <span style="color: #D7261E;">*</span></span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width: 100%; margin-bottom: 12px;">Send Inquiry</button>
+            </fieldset>
+
+            <p style="font-size: 0.85rem; color: #66788A; text-align: center; margin-bottom: 12px;">
+              Your information will only be used by SORT to respond to your inquiry.
+            </p>
+
+            <p style="font-size: 0.85rem; color: #66788A; text-align: center;">
+              Having trouble? <a href="mailto:info@sort.co.ug?subject=SORT%20Website%20Inquiry" style="color: #2E8B57; text-decoration: none; font-weight: 600;">Email us directly</a>
+            </p>
+          </form>
         </div>
       </div>
     </section>
