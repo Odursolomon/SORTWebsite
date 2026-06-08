@@ -1,0 +1,9 @@
+Copyright (c) 2026 Solomon Odur Research Technologies (SORT).
+
+All rights reserved.
+
+This website, including its text, design, branding, layout, source code, images, and other materials, is the property of Solomon Odur Research Technologies (SORT), unless otherwise stated.
+
+No part of this website may be copied, modified, redistributed, republished, or used for commercial purposes without prior written permission from Solomon Odur Research Technologies (SORT).
+
+Third-party assets, libraries, icons, fonts, or images used in this project remain subject to their respective licenses and terms of use.
