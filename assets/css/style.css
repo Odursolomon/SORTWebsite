@@ -2030,3 +2030,78 @@ body {
     padding: 22px;
   }
 }
+/* ==================================================
+   CONTACT PAGE MOBILE WIDTH FIX
+   ================================================== */
+
+@media (max-width: 860px) {
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 22px;
+    overflow-x: hidden;
+  }
+
+  .contact-panel,
+  .contact-panel--accent {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 24px !important;
+    overflow-x: hidden;
+  }
+
+  .contact-list,
+  .contact-list a,
+  .contact-list div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .contact-list span,
+  .contact-list strong {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-form,
+  .contact-form fieldset,
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .contact-form select {
+    white-space: normal;
+  }
+
+  .page-hero--contact,
+  .page-hero--contact .page-hero__inner {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-panel,
+  .contact-panel--accent {
+    padding: 20px !important;
+  }
+
+  .contact-list a,
+  .contact-list div {
+    padding: 16px !important;
+  }
+}
