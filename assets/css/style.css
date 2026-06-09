@@ -1553,21 +1553,6 @@ img {
   }
 }
 
-  .hero-card {
-    max-width: 620px;
-  }
-
-  .services-grid,
-  .portfolio-grid,
-  .page-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 860px) {
   .top-bar__inner {
     align-items: flex-start;
@@ -1807,5 +1792,241 @@ img {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+}
+/* ==================================================
+   FINAL MOBILE OVERFLOW AND RESPONSIVE FIX
+   ================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 860px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .top-bar,
+  .main-nav,
+  .hero,
+  .page-hero,
+  .section,
+  .site-footer {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .top-bar__inner,
+  .main-nav__inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .main-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 58px);
+    flex-shrink: 1;
+  }
+
+  .brand__copy {
+    min-width: 0;
+  }
+
+  .brand__copy strong,
+  .brand__copy small {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .brand__copy strong {
+    font-size: 1.15rem;
+    line-height: 1.1;
+  }
+
+  .brand__copy small {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .brand__logo {
+    flex: 0 0 auto;
+    height: 46px;
+    width: 46px;
+  }
+
+  .nav-toggle {
+    flex: 0 0 auto;
+  }
+
+  .nav-menu {
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .hero__inner,
+  .page-hero__inner,
+  .about-grid,
+  .insight-grid,
+  .portfolio-header,
+  .split-feature,
+  .contact-grid,
+  .services-grid,
+  .portfolio-grid,
+  .page-card-grid,
+  .footer-grid,
+  .trust-strip__grid,
+  .faeslims-spotlight__features,
+  .faeslims-spotlight__inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero__content,
+  .hero-card,
+  .page-card,
+  .service-card,
+  .portfolio-card,
+  .contact-panel,
+  .insight-panel,
+  .cta-panel,
+  .feature-list p,
+  .faeslims-spotlight__features div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero h1,
+  .page-hero h1,
+  .section-intro h2,
+  .section-heading h2,
+  .portfolio-header h2,
+  .insight-panel h2,
+  .cta-panel h2,
+  .contact-panel h2,
+  .faeslims-spotlight__content h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .hero__text,
+  .page-hero p,
+  .section-heading p,
+  .portfolio-card p,
+  .service-card p,
+  .page-card p,
+  .contact-list span,
+  .site-footer p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero__actions,
+  .cta-panel,
+  .portfolio-card__top {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer-bottom,
+  .footer-bottom p {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .main-nav__inner {
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand__copy strong {
+    font-size: 1rem;
+  }
+
+  .brand__copy small {
+    font-size: 0.62rem;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero__slogan {
+    font-size: 1.2rem;
+  }
+
+  .service-card,
+  .portfolio-card,
+  .page-card,
+  .contact-panel,
+  .hero-card,
+  .insight-panel,
+  .cta-panel {
+    padding: 22px;
   }
 }
